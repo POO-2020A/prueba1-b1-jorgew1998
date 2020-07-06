@@ -21,11 +21,33 @@ El programa debe imprimir true si es un palindromo y false si no lo es.
 */
 class Palindrome {
   public static void main(String[] args) {
-    Scanner inp = new Scanner(System.in);
-    System.out.print("In:");
-    String s = inp.nextLine();
-   	//write your code below
-   	
-   	
+    
+        
+    Scanner lectura = new Scanner(System.in);
+    String textPalindromo = lectura.nextLine();
+    textPalindromo = textPalindromo.replace(" ", "");
+    textPalindromo = textPalindromo.replace(".", "");
+    textPalindromo = textPalindromo.replace(",", "");
+    textPalindromo = textPalindromo.replace("ñ", "n");
+    textPalindromo = textPalindromo.toLowerCase();
+
+    boolean isPalindromo = true;
+    int inicial = 0;
+    int finallyPos = textPalindromo.length() - 1;
+
+    while (inicial < finallyPos) {
+      if (textPalindromo.charAt(inicial) != textPalindromo.charAt(finallyPos)) {
+        isPalindromo = false;
+      }
+      inicial++;
+      finallyPos--;
+    }
+
+    if (isPalindromo) {
+      System.out.println("true");
+    } else {
+      System.out.println("false");
+    }
+
   }
 }
