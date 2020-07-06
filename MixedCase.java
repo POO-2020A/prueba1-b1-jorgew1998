@@ -31,6 +31,15 @@ class MixedCase {
     Scanner inp = new Scanner(System.in);
     System.out.print("In:");
     String s = inp.nextLine();
-    //write your code below
+    String[] arregloSeparador = s.split("");
+
+    for (int i = 0; i < arregloSeparador.length; i++) {
+      String pullApart = arregloSeparador[i];
+      if (i % 2 == 0) {
+        System.out.print(pullApart.toLowerCase());
+      } else {
+        System.out.print(pullApart.toUpperCase());
+      }
+    }
   }
 }
