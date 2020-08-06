@@ -22,7 +22,7 @@ El programa debe imprimir true si es un palindromo y false si no lo es.
 class Palindrome {
   public static void main(String[] args) {
     
-    System.out.println("In:");
+    System.out.print("In:");
     Scanner lectura = new Scanner(System.in);
     String textPalindromo = lectura.nextLine();
     textPalindromo = textPalindromo.replace(" ", "");
